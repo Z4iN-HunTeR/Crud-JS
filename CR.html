@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="crud-nodejs-mongo.jpg">
+    <link rel="stylesheet" href="UD.css">
+    <title>CRUD-S</title>
+</head>
+<body>
+    <div class="crud">
+
+        <div class="head">
+            <h2> crud </h2>
+            <p> product management system </p>
+        </div>
+
+<div class="input">
+            <input type="text" placeholder="title" id="title">
+
+            <div class="price">
+                <!-- { getTotal() }هنا عملت لما يكتب ف الانبوت تنفذلى الفنكشن دى ال هى  -->
+                <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                <small id="total"></small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="Submit"> Create </button>
+        
+    </div>
+        
+        <div class="output">
+            <div class="searchBlock">
+            <input type="text" placeholder="search" id="search">
+            <div class="btn-Search">
+                <button id="S-title"> Search By Title </button>
+                <button id="S-category"> Search By Category </button>
+            </div>
+        </div>
+
+    </div>
+        <div id="delete-all"></div>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="crud-s.js"></script>
+</body>
+</html>
